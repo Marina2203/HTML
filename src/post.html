@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Запросы POST</title>
+</head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<body>
+
+<form action="/handler.php" method="post">
+
+    <p><label for="clientName">Введите имя и фамилию</label>
+        <input type="text" id="clientName" placeholder="Иван Иванов"><br>
+
+    <p>Ваш возраст:<br>
+        <input type="radio" name="age" value="rad1">До 18<br>
+        <input type="radio" name="age" value="rad2">19-40<br>
+        <input type="radio" name="age" value="rad3">40+</p><br>
+
+    <p><select size="4" name="browsers">
+        <option disabled>Выберите браузер</option>
+        <option value="Google">Google</option>
+        <option selected value="Opera">Opera</option>
+        <option value="Intel">Intel</option>
+        <option value="Gecko">Gecko</option>
+    </select></p><br>
+
+    <p><select size="4" multiple name="browsers">
+        <option disabled>Выберите браузер</option>
+        <option value="Google">Google</option>
+        <option selected value="Opera">Opera</option>
+        <option value="Intel">Intel</option>
+        <option value="Gecko">Gecko</option>
+    </select></p><br>
+
+    <p>Ваше мнение о сайте:<br>
+        <input type="checkbox" name="review" value="rad1">Всё устраивает<br>
+        <input type="checkbox" name="review" value="rad2">Чего-то не хватает<br>
+        <input type="checkbox" name="review" value="rad3">Не знаю</p><br>
+
+    <p><b>Опишите подробнее:</b></p>
+    <p><textarea rows="10" cols="100" name="text"></textarea></p>
+
+    <p><input type="submit" value="Отправить"></p>
+
+</form>
+
+</body>
+</html>
