@@ -41,7 +41,7 @@ tfoot th {
 
 thead,
 tfoot {
-  background: url(beton.jpeg);
+  background: url(../beton.jpeg);
   color: white;
   text-shadow: 2px 3px 1px black;
 }
