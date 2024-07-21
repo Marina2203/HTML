@@ -9,39 +9,84 @@
 
 <form action="/handler.php" method="post">
 
-    <p><label for="clientName">Введите имя и фамилию</label>
-        <input type="text" id="clientName" placeholder="Иван Иванов"><br>
+    <!текстовое поле ввода>
+
+    <p>
+        <label for="clientName">Введите имя и фамилию</label>
+        <input type="text" id="clientName" name="clientName" placeholder="Иван Иванов"><br>
+    </p>
+
+    <!радио-баттон>
 
     <p>Ваш возраст:<br>
-        <input type="radio" name="age" value="rad1">До 18<br>
-        <input type="radio" name="age" value="rad2">19-40<br>
-        <input type="radio" name="age" value="rad3">40+</p><br>
+        <label><input type="radio" name="age" value="rad1">До 18<br></label>
+        <label><input type="radio" name="age" value="rad2">19-40<br></label>
+        <label><input type="radio" name="age" value="rad3">40+
+        </label>
+    </p><br>
 
-    <p><select size="4" name="browsers">
-        <option disabled>Выберите браузер</option>
-        <option value="Google">Google</option>
-        <option selected value="Opera">Opera</option>
-        <option value="Intel">Intel</option>
-        <option value="Gecko">Gecko</option>
-    </select></p><br>
+    <!выпадающий список с единичным выбором>
 
-    <p><select size="4" multiple name="browsers">
-        <option disabled>Выберите браузер</option>
-        <option value="Google">Google</option>
-        <option selected value="Opera">Opera</option>
-        <option value="Intel">Intel</option>
-        <option value="Gecko">Gecko</option>
-    </select></p><br>
+    <p>
+        <label for="developer">Выбор разроботчика</label><br>
+        <select id="developer" name="developers">
+            <optgroup label="Blink">
+                <option value="1">Google</option>
+                <option value="2">Opera</option>
+                <option value="3">Samsung</option>
+                <option value="4">Intel</option>
+            </optgroup>
+            <optgroup label="Gecko">
+                <option value="5">Netscape</option>
+                <option value="6">Mozilla Faundation</option>
+            </optgroup>
+            <optgroup label="EdgeHTML">
+                <option value="7">Microsoft</option>
+            </optgroup>
+        </select>
+    </p>
 
-    <p>Ваше мнение о сайте:<br>
-        <input type="checkbox" name="review" value="rad1">Всё устраивает<br>
-        <input type="checkbox" name="review" value="rad2">Чего-то не хватает<br>
-        <input type="checkbox" name="review" value="rad3">Не знаю</p><br>
+    <p>
+        <label for="browsers">Выбор браузера</label><br>
+        <select id="browsers" name="browsers">
+            <option disabled>Выберите один браузер</option>
+            <option value="1">Google</option>
+            <option value="2">Opera</option>
+            <option value="3">Intel</option>
+            <option value="4">Gecko</option>
+        </select>
+    </p>
+
+    <!список с множественным выбором>
+
+    <p>
+        <label for="browsers1">Выбор нескольких браузеров</label><br>
+        <select id="browsers1" name="user_cars[]" multiple="multiple" size="4">
+            <option disabled>Выберите несколько браузеров</option>
+            <option value="1">Google</option>
+            <option value="2">Opera</option>
+            <option value="3">Intel</option>
+            <option value="4">Gecko</option>
+    </select>
+    </p>
+
+    <!чекбоксы>
+
+    <p>Ваше мнение:<br>
+        <label><input type="checkbox" name="review" value="check1">Всё устраивает<br></label>
+        <label><input type="checkbox" name="review" value="check2">Чего-то не хватает<br></label>
+        <label><input type="checkbox" name="review" value="check3">Не знаю</label>
+    </p>
+    <br>
+
+    <!многострочное поля ввода>
 
     <p><b>Опишите подробнее:</b></p>
     <p><textarea rows="10" cols="100" name="text"></textarea></p>
 
-    <p><input type="submit" value="Отправить"></p>
+    <!кнопка>
+
+    <button type="submit">Отправить заявку</button>
 
 </form>
 
